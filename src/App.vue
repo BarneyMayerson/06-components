@@ -1,7 +1,7 @@
 <template>
   <div>
     <h3>Just do</h3>
-    <Greetings />
+    <Greetings :age="age" />
     <User :age="age" />
   </div>
 </template>
