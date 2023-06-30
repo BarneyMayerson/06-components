@@ -14,8 +14,8 @@ export default {
 }
 </script>
 
-<style scoped>
-  p {
-    color: red;
+<style scoped lang="scss">
+  p:hover {
+    color: lighten(black, 33%);
   }
 </style>
