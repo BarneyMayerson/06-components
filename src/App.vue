@@ -1,5 +1,6 @@
 <template>
   <div>
+    <p>Just do</p>
     <Greetings />
   </div>
 </template>
