@@ -1,18 +1,26 @@
 <template>
   <div>
-    <p>Just do</p>
+    <h3>Just do</h3>
     <Greetings />
+    <User :age="age" />
   </div>
 </template>
 
 <script>
 import Greetings from "@/components/Greetings.vue";
+import User from "@/components/User.vue";
 
 export default {
   name: "App",
 
   components: {
-    Greetings
+    Greetings, User
   },
+
+  data() {
+    return {
+      age: 20,
+    }
+  }
 }
 </script>
