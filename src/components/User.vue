@@ -1,7 +1,8 @@
 <template>
   <p>The user is {{ age }} years old.</p>
   <p>{{ ageDouble }} : doubled!</p>
-  <button type="button" @click.prevent="onClickAge">Update age</button>
+  <button type="button" @click.prevent="onClickAge">Update age Event</button>
+  <button type="button" @click.prevent="ageChangeFn(5)">Update age Callback</button>
 </template>
 
 <script>
@@ -14,8 +15,9 @@ export default {
       // required: true,
       validaror(value) {
         return value < 130;
-      }
+      },
     },
+    ageChangeFn: Function,
   },
 
   emits: ["age-changed"],
