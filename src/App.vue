@@ -37,24 +37,38 @@
       <p>Funny</p>
     </AppForm>
   </div>
+  <hr>
+  <div style="margin-top: 2rem;">
+    <select v-model="componentName">
+      <option value="Home">Home</option>
+      <option value="About">About</option>
+    </select>
+
+    <keep-alive>
+      <component :is="componentName" />
+    </keep-alive>
+  </div>
 </template>
 
 <script>
 import Greetings from "@/components/Greetings.vue";
 import User from "@/components/User.vue";
 import AppForm from "@/components/Form.vue";
+import Home from "@/components/Home.vue";
+import About from "@/components/About.vue";
 
 export default {
   name: "App",
 
   components: {
-    Greetings, User, AppForm,
+    Greetings, User, AppForm, Home, About,
   },
 
   data() {
     return {
       age: 20,
       help: "There help about this form.",
+      componentName: "Home"
     }
   },
 
