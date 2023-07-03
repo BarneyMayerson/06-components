@@ -7,17 +7,34 @@
   <hr>
   <div style="margin-top: 2rem;">
     <AppForm>
-      <div class="help">
-        <p>There is help about this form.</p>
-      </div>
-      <div class="fields">
+      <template v-slot:help>
+        <p>{{ help }}</p>
+      </template>
+      <template v-slot:fields>
         <input type="text" placeholder="email" />
         <input type="text" placeholder="username" />
         <input type="text" placeholder="password" />
-      </div>
-      <div class="buttons" style="margin-top: 12px;">
+      </template>
+      <template v-slot:buttons>
         <button type="submit">Submit</button>
-      </div>
+      </template>
+
+      <p>Dummy</p>
+    </AppForm>
+    <hr>
+    <AppForm>
+      <template v-slot:help>
+        <p>Contact help text.</p>
+      </template>
+      <template v-slot:fields>
+        <input type="text" placeholder="name" />
+        <input type="text" placeholder="message" />
+      </template>
+      <template v-slot:buttons>
+        <button type="submit">Submit</button>
+      </template>
+
+      <p>Funny</p>
     </AppForm>
   </div>
 </template>
@@ -37,6 +54,7 @@ export default {
   data() {
     return {
       age: 20,
+      help: "There help about this form.",
     }
   },
 
